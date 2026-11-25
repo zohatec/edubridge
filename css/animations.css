@@ -107,27 +107,31 @@
   animation-delay: var(--d, 0s);
 }
 
-/* ডাইনামিক গ্রিডের কার্ড — গ্রিড ভিউপোর্টে এলে কার্ডগুলো একের পর এক ঢোকে */
+/* ডাইনামিক গ্রিডের কার্ড — কন্টেইনারের বদলে প্রতিটি কার্ড নিজেই .visible পায়
+   (JS প্রতিটি কার্ড আলাদাভাবে ওয়াচ করে)। ফলে মোবাইলে লম্বা এক-কলাম গ্রিডেও
+   কার্ডটি স্ক্রিনে আসার মুহূর্তেই শুধু সেটিই এনিমেট হয় — নিচের কার্ড আগেই
+   এনিমেট হয়ে যায় না। */
 .stagger > * { opacity: 0; }
-.stagger.visible > * { opacity: 1; }
-.stagger.visible > *.from-right {
+.stagger > *.visible { opacity: 1; }
+.stagger > *.visible.from-right {
   animation: slideInR 0.65s var(--ease) backwards;
   animation-delay: var(--d, 0s);
 }
-.stagger.visible > *.from-left {
+.stagger > *.visible.from-left {
   animation: slideInL 0.65s var(--ease) backwards;
   animation-delay: var(--d, 0s);
 }
 
-/* ধাপে ধাপে (stagger) এন্ট্রি ডিলে — কার্ডগুলো একটার পর একটা ঢোকে */
-.stagger.visible > *:nth-child(1) { --d: 0.05s; }
-.stagger.visible > *:nth-child(2) { --d: 0.12s; }
-.stagger.visible > *:nth-child(3) { --d: 0.19s; }
-.stagger.visible > *:nth-child(4) { --d: 0.26s; }
-.stagger.visible > *:nth-child(5) { --d: 0.33s; }
-.stagger.visible > *:nth-child(6) { --d: 0.4s; }
-.stagger.visible > *:nth-child(7) { --d: 0.47s; }
-.stagger.visible > *:nth-child(8) { --d: 0.54s; }
+/* ধাপে ধাপে (stagger) এন্ট্রি ডিলে — একসাথে স্ক্রিনে এলে কার্ডগুলো একটার
+   পর একটা ঢোকে; আলাদাভাবে এলেও ডিলে খুব ছোট বলে সমস্যা নেই */
+.stagger > *:nth-child(1) { --d: 0.05s; }
+.stagger > *:nth-child(2) { --d: 0.12s; }
+.stagger > *:nth-child(3) { --d: 0.19s; }
+.stagger > *:nth-child(4) { --d: 0.26s; }
+.stagger > *:nth-child(5) { --d: 0.33s; }
+.stagger > *:nth-child(6) { --d: 0.4s; }
+.stagger > *:nth-child(7) { --d: 0.47s; }
+.stagger > *:nth-child(8) { --d: 0.54s; }
 
 /* প্রাইসিং ও স্ট্যাটস কার্ডেও হালকা ক্যাসকেড ডিলে */
 .pricing-grid > .reveal:nth-child(2),
@@ -135,6 +139,20 @@
 .pricing-grid > .reveal:nth-child(3),
 .stats-grid > .reveal:nth-child(3) { --d: 0.24s; }
 .stats-grid > .reveal:nth-child(4) { --d: 0.36s; }
+
+/* ---------- মোবাইল (≤768px) ----------
+   এক-কলাম লেআউটে কার্ড একে একে স্ক্রিনে আসে — ৩য় ও পরবর্তী কার্ডের ডিলে
+   সর্বোচ্চ ০.১৫s-এ সীমাবদ্ধ (নইলে স্ক্রিনে এসেও লম্বা অপেক্ষা লাগে)।
+   ছোট স্ক্রিনে স্লাইড-দূরত্বও ৮০px → ৪৪px — দেখতে মসৃণ ও ওভারফ্লো-নিরাপদ। */
+@keyframes slideInR-sm { from { opacity: 0; transform: translateX(44px); } }
+@keyframes slideInL-sm { from { opacity: 0; transform: translateX(-44px); } }
+@media (max-width: 768px) {
+  .reveal.visible.from-right,
+  .stagger > *.visible.from-right { animation-name: slideInR-sm; }
+  .reveal.visible.from-left,
+  .stagger > *.visible.from-left { animation-name: slideInL-sm; }
+  .stagger > *:nth-child(n+3) { --d: 0.15s; }
+}
 
 /* Success card pop */
 .form-success { animation: successPop 0.5s var(--ease) both; }
