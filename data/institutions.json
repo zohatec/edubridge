@@ -1,0 +1,164 @@
+{
+  "institutions": [
+    {
+      "id": "rcs",
+      "name": {
+        "bn": "রাজশাহী কলেজিয়েট স্কুল",
+        "en": "Rajshahi Collegiate School"
+      },
+      "type": {
+        "bn": "বালক উচ্চ বিদ্যালয়",
+        "en": "Boys' High School"
+      },
+      "estd": "1828",
+      "eiin": "126456",
+      "address": {
+        "bn": "সাহেব বাজার, বোয়ালিয়া, রাজশাহী ৬১০০",
+        "en": "Shaheb Bazar, Boalia, Rajshahi 6100"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=Rajshahi+Collegiate+School+Rajshahi",
+      "website": "",
+      "img": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=70"
+    },
+    {
+      "id": "rc",
+      "name": {
+        "bn": "রাজশাহী কলেজ",
+        "en": "Rajshahi College"
+      },
+      "type": {
+        "bn": "ডিগ্রি (সম্মান) কলেজ",
+        "en": "Degree (Honours) College"
+      },
+      "estd": "1873",
+      "eiin": "",
+      "address": {
+        "bn": "সাহেব বাজার, বোয়ালিয়া, রাজশাহী ৬১০০",
+        "en": "Shaheb Bazar, Boalia, Rajshahi 6100"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=Rajshahi+College+Rajshahi",
+      "website": "http://rc.gov.bd",
+      "img": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=700&q=70"
+    },
+    {
+      "id": "pn",
+      "name": {
+        "bn": "সরকারি পি.এন. বালিকা উচ্চ বিদ্যালয়",
+        "en": "Govt. P.N. Girls' High School"
+      },
+      "type": {
+        "bn": "বালিকা উচ্চ বিদ্যালয়",
+        "en": "Girls' High School"
+      },
+      "estd": "1928",
+      "eiin": "126455",
+      "address": {
+        "bn": "সাহেব বাজার রোড, গোরামারা, বোয়ালিয়া, রাজশাহী ৬১০০",
+        "en": "Saheb Bazar Rd, Ghoramara, Boalia, Rajshahi 6100"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=Govt+PN+Girls+High+School+Rajshahi",
+      "website": "https://pn.edu.bd",
+      "img": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=700&q=70"
+    },
+    {
+      "id": "mgsc",
+      "name": {
+        "bn": "রাজশাহী সরকারি মডেল স্কুল অ্যান্ড কলেজ",
+        "en": "Rajshahi Govt. Model School & College"
+      },
+      "type": {
+        "bn": "স্কুল অ্যান্ড কলেজ",
+        "en": "School & College"
+      },
+      "estd": "2006",
+      "eiin": "127043",
+      "address": {
+        "bn": "কাজিহাটা, রাজশাহী ৬০০০",
+        "en": "Kazihata, Rajshahi 6000"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=Rajshahi+Govt+Model+School+and+College+Kazihata",
+      "website": "https://www.rmscraj.edu.bd",
+      "img": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=700&q=70"
+    },
+    {
+      "id": "mohsin",
+      "name": {
+        "bn": "হাজী মুহম্মদ মুহসীন সরকারি উচ্চ বিদ্যালয়",
+        "en": "Haji Muhammad Mohsin Govt. High School"
+      },
+      "type": {
+        "bn": "উচ্চ বিদ্যালয়",
+        "en": "High School"
+      },
+      "estd": "1874",
+      "eiin": "",
+      "address": {
+        "bn": "স্রীরামপুর, রাজশাহী ৬০০০",
+        "en": "Srirampur, Rajshahi 6000"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=Haji+Muhammad+Mohsin+Government+High+School+Rajshahi",
+      "website": "https://rajmohsin.edu.bd",
+      "img": "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=70"
+    },
+    {
+      "id": "ngdc",
+      "name": {
+        "bn": "নিউ গভর্নমেন্ট ডিগ্রি কলেজ, রাজশাহী",
+        "en": "New Govt. Degree College, Rajshahi"
+      },
+      "type": {
+        "bn": "ডিগ্রি কলেজ",
+        "en": "Degree College"
+      },
+      "estd": "1966",
+      "eiin": "127038",
+      "address": {
+        "bn": "কাজিহাটা, রাজশাহী ৬০০০",
+        "en": "Kazihata, Rajshahi 6000"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=New+Government+Degree+College+Rajshahi",
+      "website": "",
+      "img": "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=700&q=70"
+    },
+    {
+      "id": "rcc",
+      "name": {
+        "bn": "রাজশাহী ক্যাডেট কলেজ",
+        "en": "Rajshahi Cadet College"
+      },
+      "type": {
+        "bn": "ক্যাডেট কলেজ",
+        "en": "Cadet College"
+      },
+      "estd": "1966",
+      "eiin": "",
+      "address": {
+        "bn": "সরদাহ, চারঘাট, রাজশাহী ৬২৭১ (শহর থেকে ~২৫ কিমি)",
+        "en": "Sardah, Charghat, Rajshahi 6271 (~25 km from city)"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=Rajshahi+Cadet+College+Sardah",
+      "website": "",
+      "img": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=700&q=70"
+    },
+    {
+      "id": "rmc",
+      "name": {
+        "bn": "রাজশাহী মেডিকেল কলেজ",
+        "en": "Rajshahi Medical College"
+      },
+      "type": {
+        "bn": "মেডিকেল কলেজ",
+        "en": "Medical College"
+      },
+      "estd": "1958",
+      "eiin": "",
+      "address": {
+        "bn": "মেডিকেল কলেজ রোড, লক্ষ্মীপুর, রাজশাহী ৬০০০",
+        "en": "Medical College Road, Laxmipur, Rajshahi 6000"
+      },
+      "maps": "https://www.google.com/maps/search/?api=1&query=Rajshahi+Medical+College+Laxmipur",
+      "website": "https://rmc.edu.bd",
+      "img": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=700&q=70"
+    }
+  ]
+}

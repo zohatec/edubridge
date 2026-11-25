@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="bn" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="শিক্ষা সেতু — রাজশাহীর স্কুল ও কলেজের ভর্তি, নোটিশ, বৃত্তি, ফলাফল ও পড়াশোনার সব তথ্য এক প্ল্যাটফর্মে। সম্পূর্ণ ফ্রি। | EduBridge Rajshahi - One platform for every School & College need of Rajshahi, Bangladesh." />
+  <title>শিক্ষা সেতু | রাজশাহীর ডিজিটাল শিক্ষা প্ল্যাটফর্ম</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b5d51'/%3E%3Cpath d='M32 14 8 26l24 12 24-12-24-12z' fill='%23f0a500'/%3E%3Cpath d='M18 32v12c0 4 6.3 8 14 8s14-4 14-8V32l-14 7-14-7z' fill='%23ffffff'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+  <!-- ================= PRELOADER ================= -->
+  <div id="preloader" aria-hidden="true">
+    <div class="preloader-box">
+      <svg class="preloader-cap" viewBox="0 0 64 64" width="64" height="64" aria-hidden="true"><path d="M32 14 8 26l24 12 24-12-24-12z" fill="#f0a500"/><path d="M18 32v12c0 4 6.3 8 14 8s14-4 14-8V32l-14 7-14-7z" fill="#0b5d51"/></svg>
+      <p class="preloader-name" data-i18n="brand.name">শিক্ষা সেতু</p>
+      <div class="preloader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ================= STICKY NAVBAR ================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="Shikkha Setu - Home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="34" height="34"><path d="M32 14 8 26l24 12 24-12-24-12z" fill="#f0a500"/><path d="M18 32v12c0 4 6.3 8 14 8s14-4 14-8V32l-14 7-14-7z" fill="currentColor"/></svg>
+        </span>
+        <span class="brand-text">
+          <strong data-i18n="brand.name">শিক্ষা সেতু</strong>
+          <small data-i18n="brand.tag">রাজশাহী, বাংলাদেশ</small>
+        </span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Main navigation">
+        <ul>
+          <li><a href="#home" class="nav-link active" data-i18n="nav.home">হোম</a></li>
+          <li><a href="#problems" class="nav-link" data-i18n="nav.problems">সমস্যা ও সমাধান</a></li>
+          <li><a href="#institutions" class="nav-link" data-i18n="nav.institutions">প্রতিষ্ঠান</a></li>
+          <li><a href="#notices" class="nav-link" data-i18n="nav.notices">নোটিশ বোর্ড</a></li>
+          <li><a href="#resources" class="nav-link" data-i18n="nav.resources">ফ্রি রিসোর্স</a></li>
+          <li><a href="#faq" class="nav-link" data-i18n="nav.faq">প্রশ্নোত্তর</a></li>
+          <li><a href="#contact" class="nav-link nav-cta" data-i18n="nav.contact">যোগাযোগ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" type="button" data-i18n-aria="btn.theme.aria" aria-label="Toggle dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button id="langToggle" class="lang-btn" type="button" data-i18n-aria="btn.lang.aria" aria-label="Switch language">
+          <span id="langLabel">EN</span>
+        </button>
+        <button id="hamburger" class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero" id="home">
+      <div class="hero-deco" aria-hidden="true">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+        <span class="dot-grid dg-1"></span>
+        <span class="dot-grid dg-2"></span>
+      </div>
+
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <span class="hero-badge reveal">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span data-i18n="hero.badge">রাজশাহী, বাংলাদেশ</span>
+          </span>
+
+          <h1 class="hero-title reveal">
+            <span data-i18n="hero.title.1">শিক্ষার প্রতিটি জটিলতার সমাধান —</span>
+            <span class="grad-text" data-i18n="hero.title.2">এখন এক প্ল্যাটফর্মে</span>
+          </h1>
+
+          <p class="hero-sub reveal" data-i18n="hero.subtitle">ভর্তি থেকে ফলাফল, নোটিশ থেকে বৃত্তি — রাজশাহীর স্কুল ও কলেজের সব তথ্য ও সেবা এখন আপনার হাতের মুঠোয়। সম্পূর্ণ ফ্রি, সবসময়।</p>
+
+          <div class="hero-cta reveal">
+            <a href="#institutions" class="btn btn-primary">
+              <span data-i18n="hero.cta.primary">প্রতিষ্ঠান দেখুন</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+            </a>
+            <a href="#notices" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+              <span data-i18n="hero.cta.secondary">লাইভ নোটিশ বোর্ড</span>
+            </a>
+          </div>
+
+          <div class="hero-stats reveal">
+            <div class="h-stat"><strong>৮+</strong><span data-i18n="hero.stat1">অংশীদার প্রতিষ্ঠান</span></div>
+            <div class="h-stat"><strong>১০০%</strong><span data-i18n="hero.stat2">ফ্রি সেবা</span></div>
+            <div class="h-stat"><strong>২৪/৭</strong><span data-i18n="hero.stat3">তথ্য অ্যাক্সেস</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-img-wrap">
+            <img class="hero-img" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=70" alt="" data-i18n-alt="hero.img.alt" loading="eager" />
+            <div class="hero-ring" aria-hidden="true"></div>
+          </div>
+
+          <div class="float-card float-card-1">
+            <span class="fc-icon fc-green" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <div>
+              <strong data-i18n="hero.card1.t">ভর্তি বিজ্ঞপ্তি প্রকাশ</strong>
+              <small data-i18n="hero.card1.s">রাজশাহী কলেজ • ডিসেম্বর ২০২৬</small>
+            </div>
+          </div>
+
+          <div class="float-card float-card-2">
+            <span class="fc-icon fc-gold" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+            </span>
+            <div>
+              <strong data-i18n="hero.card2.t">নতুন নোটিশ এসেছে</strong>
+              <small data-i18n="hero.card2.s">বোর্ড • ফরম পূরণ চলছে</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#problems" class="scroll-hint" aria-hidden="true">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee" id="marquee"></div>
+    </div>
+
+    <!-- ================= PROBLEMS & SOLUTIONS ================= -->
+    <section class="section" id="problems">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="sec.problems.eyebrow">সমস্যা বিশ্লেষণ</span>
+          <h2 data-i18n="sec.problems.title">যে ৬টি সমস্যা আমরা প্রতিদিন সমাধান করি</h2>
+          <p data-i18n="sec.problems.sub">রাজশাহীর স্কুল-কলেজ পরিবারের বাস্তব সমস্যাগুলো ম্যাপ করেছি, তারপর একে একে প্রযুক্তি দিয়ে সমাধান তৈরি করেছি।</p>
+        </div>
+        <div class="grid-3 problem-grid stagger" id="problemGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= INSTITUTIONS ================= -->
+    <section class="section section-alt" id="institutions">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="sec.institutions.eyebrow">রাজশাহীর শিক্ষা ঐতিহ্য</span>
+          <h2 data-i18n="sec.institutions.title">অংশীদার স্কুল ও কলেজসমূহ</h2>
+          <p data-i18n="sec.institutions.sub">প্রতিটি কার্ডে যাচাইকৃত ঠিকানা, প্রতিষ্ঠাকাল ও সরাসরি Google Maps লিংক — নির্ভুল তথ্যের নিশ্চয়তা।</p>
+        </div>
+        <div class="grid-4 inst-grid stagger" id="instGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= NOTICE BOARD (DATA FETCHING) ================= -->
+    <section class="section" id="notices">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow eyebrow-live"><span class="live-dot" aria-hidden="true"></span><span data-i18n="sec.notices.eyebrow">লাইভ ডাটা ফেচিং</span></span>
+          <h2 data-i18n="sec.notices.title">ডিজিটাল নোটিশ বোর্ড</h2>
+          <p data-i18n="sec.notices.sub">সব প্রতিষ্ঠানের আপডেট এক জায়গায়। ডাটা JSON ফাইল থেকে ফেচ করা হয় — Firebase যুক্ত করলে রিয়েল-টাইমে আপডেট হবে।</p>
+        </div>
+
+        <div class="notice-tabs stagger" role="tablist" aria-label="Notice categories" id="noticeTabs">
+          <button class="tab active" type="button" data-cat="all" data-i18n="tab.all">সব</button>
+          <button class="tab" type="button" data-cat="admission" data-i18n="tab.admission">ভর্তি</button>
+          <button class="tab" type="button" data-cat="result" data-i18n="tab.result">ফলাফল</button>
+          <button class="tab" type="button" data-cat="scholarship" data-i18n="tab.scholarship">বৃত্তি</button>
+          <button class="tab" type="button" data-cat="event" data-i18n="tab.event">ইভেন্ট</button>
+        </div>
+
+        <div class="notice-list stagger" id="noticeList" aria-live="polite"></div>
+        <p class="data-source reveal" id="dataSource" data-i18n="sec.notices.source">ডাটা সোর্স: লোকাল JSON (অফলাইন ফলব্যাক)</p>
+      </div>
+    </section>
+
+    <!-- ================= DEADLINES / COUNTDOWN ================= -->
+    <section class="section section-alt" id="deadlines">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="sec.deadlines.eyebrow">সময় গণনা</span>
+          <h2 data-i18n="sec.deadlines.title">আসন্ন ভর্তি ও ডেডলাইন</h2>
+          <p data-i18n="sec.deadlines.sub">লাইভ কাউন্টডাউন টাইমার — কোনো সুযোগ আর হাতছানি হয়ে যাবে না।</p>
+        </div>
+        <div class="grid-3 stagger" id="deadlineGrid"></div>
+        <p class="demo-note reveal" data-i18n="sec.deadlines.demo">নোট: ডেডলাইনগুলো ডেমো ডাটা — নিয়মিত আপডেট করা যায় JSON ফাইল সম্পাদনা করে।</p>
+      </div>
+    </section>
+
+    <!-- ================= FREE RESOURCES ================= -->
+    <section class="section" id="resources">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="sec.resources.eyebrow">ফ্রি স্টাডি হাব</span>
+          <h2 data-i18n="sec.resources.title">অতিরিক্ত খরচ ছাড়াই পড়াশোনার সব উপকরণ</h2>
+          <p data-i18n="sec.resources.sub">বাছাই করা সরকারি ও নির্ভরযোগ্য থার্ড-পার্টি ওয়েবসাইটের সরাসরি লিংক — কোচিং খরচ ছাড়াই নিজেকে গড়ে তুলুন।</p>
+        </div>
+        <div class="grid-3 resource-grid stagger" id="resourceGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= PRICING (ALL FREE) ================= -->
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="sec.pricing.eyebrow">সেবা মূল্য</span>
+          <h2 data-i18n="sec.pricing.title">সব প্ল্যান, এক মূল্য — সম্পূর্ণ ফ্রি</h2>
+          <p data-i18n="sec.pricing.sub">শিক্ষা সেতু একটি অলাভজনক উদ্যোগ। শিক্ষার্থী, অভিভাবক বা প্রতিষ্ঠান — কেউই এক টাকাও দেবেন না।</p>
+        </div>
+        <div class="grid-3 pricing-grid">
+          <div class="pricing-card reveal">
+            <h3 data-i18n="plan.stud.t">শিক্ষার্থী</h3>
+            <div class="price"><span class="amount">৳০</span><span class="per" data-i18n="price.forever">সবসময় ফ্রি</span></div>
+            <ul>
+              <li data-i18n="plan.stud.f1">ভর্তি ক্যালেন্ডার ও কাউন্টডাউন</li>
+              <li data-i18n="plan.stud.f2">ফ্রি পাঠ্যবই ও রিসোর্স লিংক</li>
+              <li data-i18n="plan.stud.f3">নোটিশ বোর্ড অ্যাক্সেস</li>
+              <li data-i18n="plan.stud.f4">ফর্ম পূরণে ধাপে ধাপে সহায়তা</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block" data-i18n="plan.cta">এখনই শুরু করুন</a>
+          </div>
+          <div class="pricing-card featured reveal">
+            <span class="ribbon" data-i18n="price.ribbon">সম্পূর্ণ ফ্রি</span>
+            <h3 data-i18n="plan.parent.t">অভিভাবক</h3>
+            <div class="price"><span class="amount">৳০</span><span class="per" data-i18n="price.forever">সবসময় ফ্রি</span></div>
+            <ul>
+              <li data-i18n="plan.parent.f1">প্রতিষ্ঠানের যাচাইকৃত ঠিকানা ও ম্যাপ</li>
+              <li data-i18n="plan.parent.f2">সরাসরি যোগাযোগ ফর্ম</li>
+              <li data-i18n="plan.parent.f3">বৃত্তি ও ফি সংক্রান্ত গাইড</li>
+              <li data-i18n="plan.parent.f4">ফলাফল ও ফরম রিমাইন্ডার</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block" data-i18n="plan.cta">এখনই শুরু করুন</a>
+          </div>
+          <div class="pricing-card reveal">
+            <h3 data-i18n="plan.inst.t">প্রতিষ্ঠান</h3>
+            <div class="price"><span class="amount">৳০</span><span class="per" data-i18n="price.forever">সবসময় ফ্রি</span></div>
+            <ul>
+              <li data-i18n="plan.inst.f1">নোটিশ ও ভর্তি বিজ্ঞপ্তি প্রকাশ</li>
+              <li data-i18n="plan.inst.f2">প্রোফাইল ও Google Maps লোকেশন</li>
+              <li data-i18n="plan.inst.f3">অভিভাবকদের কাছে সরাসরি পৌঁছান</li>
+              <li data-i18n="plan.inst.f4">ডাটা আপডেটে সহায়তা</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block" data-i18n="plan.cta">এখনই শুরু করুন</a>
+          </div>
+        </div>
+        <p class="demo-note reveal" data-i18n="pricing.note">শিক্ষার কোনো সেবা কখনো বিক্রি হয় না — এটাই শিক্ষা সেতুর প্রতিশ্রুতি।</p>
+      </div>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section class="stats-band" id="stats">
+      <div class="container grid-4 stats-grid">
+        <div class="stat reveal"><strong data-count="8" data-suffix="+">০</strong><span data-i18n="stat.1">অংশীদার প্রতিষ্ঠান</span></div>
+        <div class="stat reveal"><strong data-count="6" data-suffix="+">০</strong><span data-i18n="stat.2">ফ্রি রিসোর্স লিংক</span></div>
+        <div class="stat reveal"><strong data-count="100" data-suffix="%">০</strong><span data-i18n="stat.3">ফ্রি সেবা</span></div>
+        <div class="stat reveal"><strong data-count="24" data-suffix="/7">০</strong><span data-i18n="stat.4">তথ্য অ্যাক্সেস</span></div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="sec.testimonials.eyebrow">ব্যবহারকারীর কথা</span>
+          <h2 data-i18n="sec.testimonials.title">শিক্ষার্থী, অভিভাবক ও শিক্ষকদের অভিজ্ঞতা</h2>
+          <p data-i18n="sec.testimonials.sub">প্ল্যাটফর্মটি কেমন বদল আনছে — শুনুন রাজশাহীর মানুষের মুখেই।</p>
+        </div>
+        <div class="grid-3 stagger" id="testimonialGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================= FAQ ================= -->
+    <section class="section section-alt" id="faq">
+      <div class="container narrow">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="sec.faq.eyebrow">সাধারণ প্রশ্ন</span>
+          <h2 data-i18n="sec.faq.title">যা সবাই জানতে চায়</h2>
+          <p data-i18n="sec.faq.sub">আপনার প্রশ্নের উত্তর এখানে না পেলে নিচের ফর্মে লিখুন — আমরা উত্তর দেব।</p>
+        </div>
+        <div class="faq-list stagger" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT / FORM (FREE DATA STORAGE) ================= -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="sec.contact.eyebrow">যোগাযোগ ও সহায়তা</span>
+          <h2 data-i18n="sec.contact.title">আপনার সমস্যা জানান — সমাধান পান</h2>
+          <p data-i18n="sec.contact.sub">ফর্মটি পূরণ করুন; তথ্য ফ্রি ক্লাউড স্টোরেজে (Firebase Realtime Database) সেভ হবে এবং আমাদের টিম যোগাযোগ করবে।</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info stagger">
+            <div class="info-card">
+              <span class="ic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+              <div><h3 data-i18n="c.addr.t">অফিস ঠিকানা</h3><p data-i18n="c.addr.v">শিক্ষা সেতু, সাহেব বাজার জিরো পয়েন্ট, বোয়ালিয়া, রাজশাহী ৬১০০, বাংলাদেশ</p></div>
+            </div>
+            <div class="info-card">
+              <span class="ic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.6 2z"/></svg></span>
+              <div><h3 data-i18n="c.phone.t">হটলাইন</h3><p>+880 1700-000000</p></div>
+            </div>
+            <div class="info-card">
+              <span class="ic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></span>
+              <div><h3 data-i18n="c.mail.t">ইমেইল</h3><p>info@shikkhasetu-rajshahi.com</p></div>
+            </div>
+            <div class="info-card">
+              <span class="ic-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+              <div><h3 data-i18n="c.hours.t">সেবা সময়</h3><p data-i18n="c.hours.v">রবি – বৃহস্পতি, সকাল ৯টি – বিকাল ৫টি</p></div>
+            </div>
+            <div class="db-badge" id="dbBadge">
+              <span class="db-dot" aria-hidden="true"></span>
+              <span id="dbBadgeText">স্টোরেজ সংযোগ পরীক্ষা চলছে…</span>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap">
+            <form id="supportForm" class="contact-form stagger" novalidate>
+              <div class="form-row">
+                <div class="field">
+                  <label for="fName" data-i18n="form.name.l">পূর্ণ নাম *</label>
+                  <input type="text" id="fName" name="name" data-i18n-ph="form.name.ph" placeholder="আপনার নাম লিখুন" required />
+                  <small class="err" data-err="name"></small>
+                </div>
+                <div class="field">
+                  <label for="fPhone" data-i18n="form.phone.l">মোবাইল নম্বর *</label>
+                  <input type="tel" id="fPhone" name="phone" data-i18n-ph="form.phone.ph" placeholder="01XXXXXXXXX" required />
+                  <small class="err" data-err="phone"></small>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="fEmail" data-i18n="form.email.l">ইমেইল (ঐচ্ছিক)</label>
+                  <input type="email" id="fEmail" name="email" data-i18n-ph="form.email.ph" placeholder="you@example.com" />
+                  <small class="err" data-err="email"></small>
+                </div>
+                <div class="field">
+                  <label for="fInst" data-i18n="form.inst.l">প্রতিষ্ঠান *</label>
+                  <select id="fInst" name="institution" required>
+                    <option value="" data-i18n="form.select.ph">— নির্বাচন করুন —</option>
+                  </select>
+                  <small class="err" data-err="institution"></small>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="fClass" data-i18n="form.cls.l">শ্রেণি / স্তর *</label>
+                  <select id="fClass" name="klass" required>
+                    <option value="" data-i18n="form.select.ph">— নির্বাচন করুন —</option>
+                    <option value="c6" data-i18n="cls.6">ষষ্ঠ শ্রেণি</option>
+                    <option value="c7" data-i18n="cls.7">সপ্তম শ্রেণি</option>
+                    <option value="c8" data-i18n="cls.8">অষ্টম শ্রেণি</option>
+                    <option value="c9" data-i18n="cls.9">নবম শ্রেণি</option>
+                    <option value="c10" data-i18n="cls.10">দশম শ্রেণি</option>
+                    <option value="c11" data-i18n="cls.11">একাদশ শ্রেণি</option>
+                    <option value="c12" data-i18n="cls.12">দ্বাদশ শ্রেণি</option>
+                    <option value="ug" data-i18n="cls.ug">ডিগ্রি / সম্মান</option>
+                    <option value="guardian" data-i18n="cls.guardian">অভিভাবক</option>
+                  </select>
+                  <small class="err" data-err="klass"></small>
+                </div>
+                <div class="field">
+                  <label for="fTopic" data-i18n="form.topic.l">সমস্যা / বিষয় *</label>
+                  <select id="fTopic" name="topic" required>
+                    <option value="" data-i18n="form.select.ph">— নির্বাচন করুন —</option>
+                    <option value="admission" data-i18n="topic.1">ভর্তি সহায়তা</option>
+                    <option value="scholarship" data-i18n="topic.2">বৃত্তি তথ্য</option>
+                    <option value="tutor" data-i18n="topic.3">টিউটর / স্টাডি গ্রুপ</option>
+                    <option value="result" data-i18n="topic.4">ফলাফল সহায়তা</option>
+                    <option value="addinst" data-i18n="topic.5">প্রতিষ্ঠান তথ্য যোগ</option>
+                    <option value="other" data-i18n="topic.6">অন্যান্য</option>
+                  </select>
+                  <small class="err" data-err="topic"></small>
+                </div>
+              </div>
+              <div class="field">
+                <label for="fMsg" data-i18n="form.msg.l">বার্তা</label>
+                <textarea id="fMsg" name="message" rows="4" data-i18n-ph="form.msg.ph" placeholder="আপনার সমস্যা বিস্তারিত লিখুন…"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                <span class="btn-label" data-i18n="form.submit">তথ্য জমা দিন</span>
+                <span class="btn-spinner" aria-hidden="true"></span>
+              </button>
+              <p class="count-line" id="countLine"></p>
+            </form>
+
+            <div class="form-success" id="formSuccess" hidden>
+              <svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12.5 2.5 2.5L16 9.5"/></svg>
+              <h3 data-i18n="ok.title">আবেদন সফলভাবে জমা হয়েছে!</h3>
+              <p data-i18n="ok.body">আপনার ট্র্যাকিং আইডি সংরক্ষণ করুন — আমাদের টিম ২৪-৪৮ ঘণ্টার মধ্যে যোগাযোগ করবে।</p>
+              <div class="track-box"><span data-i18n="ok.track">ট্র্যাকিং আইডি</span><strong id="trackId">—</strong></div>
+              <button type="button" class="btn btn-ghost" id="againBtn" data-i18n="ok.again">আরেকটি আবেদন করুন</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GOOGLE MAP ================= -->
+    <section class="section section-alt" id="map">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow" data-i18n="sec.map.eyebrow">লোকেশন</span>
+          <h2 data-i18n="sec.map.title">Google Maps-এ রাজশাহীর শিক্ষা মানচিত্র</h2>
+          <p data-i18n="sec.map.sub">প্রতিটি প্রতিষ্ঠানের সঠিক অবস্থান ম্যাপেই দেখুন — রাজশাহী কলেজ এলাকার ইন্টারঅ্যাকটিভ ম্যাপ নিচে।</p>
+        </div>
+        <div class="map-grid">
+          <div class="map-frame reveal">
+            <iframe src="https://maps.google.com/maps?q=Rajshahi%20College%2C%20Rajshahi%2C%20Bangladesh&z=14&output=embed" style="border:0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Google Map - Rajshahi College, Rajshahi, Bangladesh"></iframe>
+          </div>
+          <div class="map-side reveal">
+            <h3 data-i18n="map.side.t">কেন রাজশাহী শিক্ষার রাজধানী?</h3>
+            <ul class="map-facts stagger">
+              <li><strong data-i18n="map.f1.v">১৮২৮</strong><span data-i18n="map.f1.l">দেশের প্রাচীনতম বিদ্যালয়ের প্রতিষ্ঠাকাল</span></li>
+              <li><strong data-i18n="map.f2.v">১৮৭৩</strong><span data-i18n="map.f2.l">রাজশাহী কলেজ — দেশের তৃতীয় প্রাচীনতম কলেজ</span></li>
+              <li><strong data-i18n="map.f3.v">৪+</strong><span data-i18n="map.f3.l">থানা এলাকায় ছড়িয়ে থাকা অংশীদার প্রতিষ্ঠান</span></li>
+            </ul>
+            <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Rajshahi+College+Rajshahi" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="map.btn">Google Maps-এ খুলুন</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="f-col f-about reveal">
+        <a href="#home" class="brand brand-footer">
+          <span class="brand-logo" aria-hidden="true">
+            <svg viewBox="0 0 64 64" width="34" height="34"><path d="M32 14 8 26l24 12 24-12-24-12z" fill="#f0a500"/><path d="M18 32v12c0 4 6.3 8 14 8s14-4 14-8V32l-14 7-14-7z" fill="#ffffff"/></svg>
+          </span>
+          <span class="brand-text"><strong data-i18n="brand.name">শিক্ষা সেতু</strong><small data-i18n="brand.tag">রাজশাহী, বাংলাদেশ</small></span>
+        </a>
+        <p data-i18n="f.about">রাজশাহীর স্কুল ও কলেজের শিক্ষার্থী, অভিভাবক ও শিক্ষকদের জন্য তৈরি একটি অলাভজনক ডিজিটাল প্ল্যাটফর্ম — সমস্যা বিশ্লেষণ করে সমাধান দেওয়াই আমাদের লক্ষ্য।</p>
+        <div class="socials">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" data-i18n-aria="f.s1" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H8.9v3h2.4v7h2.2z"/></svg></a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" data-i18n-aria="f.s2" aria-label="YouTube"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.3 5 12 5 12 5s-6.3 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26.3 26.3 0 0 0 2 12a26.3 26.3 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.5.4 7.8.4 7.8.4s6.3 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26.3 26.3 0 0 0 22 12a26.3 26.3 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+          <a href="mailto:info@shikkhasetu-rajshahi.com" data-i18n-aria="f.s3" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></a>
+        </div>
+      </div>
+
+      <div class="f-col reveal">
+        <h4 data-i18n="f.quick.t">দ্রুত লিংক</h4>
+        <ul>
+          <li><a href="#home" data-i18n="nav.home">হোম</a></li>
+          <li><a href="#problems" data-i18n="nav.problems">সমস্যা ও সমাধান</a></li>
+          <li><a href="#institutions" data-i18n="nav.institutions">প্রতিষ্ঠান</a></li>
+          <li><a href="#notices" data-i18n="nav.notices">নোটিশ বোর্ড</a></li>
+          <li><a href="#resources" data-i18n="nav.resources">ফ্রি রিসোর্স</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">যোগাযোগ</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col reveal">
+        <h4 data-i18n="f.links.t">গুরুত্বপূর্ণ অফিসিয়াল লিংক</h4>
+        <ul>
+          <li><a href="https://nctb.gov.bd" target="_blank" rel="noopener noreferrer">NCTB — পাঠ্যবই</a></li>
+          <li><a href="https://rajshahiboard.gov.bd" target="_blank" rel="noopener noreferrer">রাজশাহী শিক্ষা বোর্ড</a></li>
+          <li><a href="https://eboardresults.com" target="_blank" rel="noopener noreferrer">ফলাফল পোর্টাল</a></li>
+          <li><a href="https://10minuteschool.com" target="_blank" rel="noopener noreferrer">১০ মিনিট স্কুল</a></li>
+          <li><a href="http://rc.gov.bd" target="_blank" rel="noopener noreferrer">রাজশাহী কলেজ</a></li>
+          <li><a href="https://rmc.edu.bd" target="_blank" rel="noopener noreferrer">রাজশাহী মেডিকেল কলেজ</a></li>
+        </ul>
+      </div>
+
+      <div class="f-col reveal">
+        <h4 data-i18n="f.contact.t">যোগাযোগ</h4>
+        <ul class="f-contact">
+          <li><span data-i18n="c.addr.t">অফিস ঠিকানা</span>: <span data-i18n="f.addr.short">সাহেব বাজার জিরো পয়েন্ট, বোয়ালিয়া, রাজশাহী ৬১০০</span></li>
+          <li><span data-i18n="c.phone.t">হটলাইন</span>: +880 1700-000000</li>
+          <li><span data-i18n="c.mail.t">ইমেইল</span>: info@shikkhasetu-rajshahi.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom reveal">
+      <div class="container fb-inner">
+        <p>© <span id="year">2026</span> <span data-i18n="brand.name">শিক্ষা সেতু</span> — <span data-i18n="f.rights">সর্বস্বত্ব সংরক্ষিত</span></p>
+        <p data-i18n="f.demo">ডেমো প্রজেক্ট — নোটিশ ও ডেডলাইন নমুনা ডাটা; ঠিকানা ও প্রতিষ্ঠানের তথ্য পাবলিক সোর্স থেকে যাচাইকৃত।</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= FLOATING SCROLL TO TOP ================= -->
+  <button id="scrollTop" class="scroll-top" type="button" data-i18n-aria="btn.top.aria" aria-label="Scroll to top">
+    <svg class="st-ring" viewBox="0 0 48 48" aria-hidden="true"><circle class="st-ring-bg" cx="24" cy="24" r="21"/><circle class="st-ring-bar" cx="24" cy="24" r="21"/></svg>
+    <svg class="st-arrow" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5m-6 6 6-6 6 6"/></svg>
+  </button>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Firebase (compat SDK) — কনফিগার করলে js/firebase-config.js এর কী বসান -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js" defer></script>
+
+  <script src="js/data.js" defer></script>
+  <script src="js/language.js" defer></script>
+  <script src="js/data-loader.js" defer></script>
+  <script src="js/firebase-config.js" defer></script>
+  <script src="js/storage.js" defer></script>
+  <script src="js/form-handler.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>

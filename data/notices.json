@@ -1,0 +1,108 @@
+{
+  "notices": [
+    {
+      "id": "n1",
+      "date": "2026-12-01",
+      "cat": "admission",
+      "title": {
+        "bn": "একাদশ শ্রেণিতে ভর্তি কার্যক্রম ১ ডিসেম্বর থেকে শুরু",
+        "en": "Class XI admission process begins from 1 December"
+      },
+      "src": {
+        "bn": "রাজশাহী কলেজ",
+        "en": "Rajshahi College"
+      }
+    },
+    {
+      "id": "n2",
+      "date": "2026-11-20",
+      "cat": "result",
+      "title": {
+        "bn": "এসএসসি ২০২৭-এর ফরম পূরণ শুরু — প্রতিষ্ঠানের মাধ্যমে অনলাইনে",
+        "en": "SSC 2027 form fill-up begins — online via institutions"
+      },
+      "src": {
+        "bn": "রাজশাহী শিক্ষা বোর্ড",
+        "en": "BISE Rajshahi"
+      }
+    },
+    {
+      "id": "n3",
+      "date": "2026-11-25",
+      "cat": "scholarship",
+      "title": {
+        "bn": "প্রাথমিক স্তরের মেধা বৃত্তি পরীক্ষার নিবন্ধন চলছে",
+        "en": "Registration open for primary level merit scholarship exam"
+      },
+      "src": {
+        "bn": "শিক্ষা সেতু ডেস্ক",
+        "en": "EduBridge Desk"
+      }
+    },
+    {
+      "id": "n4",
+      "date": "2026-12-10",
+      "cat": "event",
+      "title": {
+        "bn": "জেলা বিজ্ঞান অলিম্পিয়াড — রাজশাহী পর্বে নিবন্ধন শুরু",
+        "en": "District Science Olympiad — Rajshahi round registration open"
+      },
+      "src": {
+        "bn": "শিক্ষা সেতু ডেস্ক",
+        "en": "EduBridge Desk"
+      }
+    },
+    {
+      "id": "n5",
+      "date": "2026-12-05",
+      "cat": "admission",
+      "title": {
+        "bn": "৯ম শ্রেণিতে ভর্তি পরীক্ষার বিস্তারিত বিজ্ঞপ্তি প্রকাশ",
+        "en": "Detailed circular published for Class IX admission test"
+      },
+      "src": {
+        "bn": "পি.এন. বালিকা উচ্চ বিদ্যালয়",
+        "en": "Govt. P.N. Girls' High School"
+      }
+    },
+    {
+      "id": "n6",
+      "date": "2026-11-30",
+      "cat": "result",
+      "title": {
+        "bn": "এইচএসসি ২০২৬ বোর্ড চ্যালেঞ্জ আবেদনের শেষ সময় ঘনিয়ে আসছে",
+        "en": "Deadline approaching for HSC 2026 board challenge applications"
+      },
+      "src": {
+        "bn": "রাজশাহী শিক্ষা বোর্ড",
+        "en": "BISE Rajshahi"
+      }
+    },
+    {
+      "id": "n7",
+      "date": "2026-12-18",
+      "cat": "event",
+      "title": {
+        "bn": "বার্ষিক ক্রীড়া ও সাংস্কৃতিক প্রতিযোগিতা — সবার অংশগ্রহণ আহ্বান",
+        "en": "Annual sports & cultural competition — all are invited"
+      },
+      "src": {
+        "bn": "হাজী মুহম্মদ মুহসীন সরকারি উচ্চ বিদ্যালয়",
+        "en": "Haji Muhammad Mohsin Govt. High School"
+      }
+    },
+    {
+      "id": "n8",
+      "date": "2027-01-05",
+      "cat": "scholarship",
+      "title": {
+        "bn": "মেধাবী ও দরিদ্র শিক্ষার্থীদের জন্য বিশেষ বৃত্তি আবেদন শুরু",
+        "en": "Special scholarship application opens for talented poor students"
+      },
+      "src": {
+        "bn": "শিক্ষা সেতু ডেস্ক",
+        "en": "EduBridge Desk"
+      }
+    }
+  ]
+}

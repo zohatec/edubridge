@@ -1,0 +1,164 @@
+/* ============================================================
+   animations.css — Keyframes & scroll-reveal system
+   ============================================================ */
+
+/* ---------- Keyframes ---------- */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+@keyframes capFloat {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-10px) rotate(4deg); }
+}
+@keyframes loadSlide {
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(320%); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes spinSlow {
+  to { transform: rotate(360deg); }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes pulseRing {
+  0% { transform: scale(0.6); opacity: 1; }
+  100% { transform: scale(1.6); opacity: 0; }
+}
+@keyframes blinkSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+@keyframes wheel {
+  0% { transform: translateY(0); opacity: 1; }
+  70% { transform: translateY(9px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+@keyframes blobMove {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(26px, -30px) scale(1.08); }
+  66% { transform: translate(-22px, 18px) scale(0.94); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes toastPop {
+  from { opacity: 0; transform: translate(-50%, 26px) scale(0.95); }
+  to { opacity: 1; transform: translate(-50%, 0) scale(1); }
+}
+@keyframes successPop {
+  0% { opacity: 0; transform: scale(0.8); }
+  60% { transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ---------- Navbar entrance (লোডের সময় উপর থেকে নেমে আসে) ----------
+   অ্যানিমেশন শেষ হলে JS ক্লাসটি সরিয়ে দেয়, যাতে transform পরিষ্কার হয়
+   (নইলে fixed মোবাইল ড্রয়ারের পজিশনিং প্রভাবিত হতে পারে)। */
+@keyframes navDrop {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+.navbar.nav-enter { animation: navDrop 0.7s var(--ease) 0.1s both; }
+
+/* ---------- Decorative movement ---------- */
+.blob-1 { animation: blobMove 12s ease-in-out infinite; }
+.blob-2 { animation: blobMove 14s ease-in-out 1.2s infinite; }
+.blob-3 { animation: blobMove 10s ease-in-out 0.6s infinite; }
+
+/* ---------- Scroll reveal system (অলটারনেটিং: ডান → বাম → ডান…) ----------
+   JS (app.js → initReveal) প্রতিটি .reveal এলিমেন্টে এবং প্রতিটি .stagger
+   গ্রিডের কার্ডে from-right / from-left ক্লাস বসায় — স্ক্রলের সময়
+   প্রথমটা ডান দিক থেকে, পরেরটা বাম দিক থেকে ভেতরে ঢোকে।
+
+   ব্যবহারের নিয়ম: এনিমেশন কেবল তখনই চলে যখন এলিমেন্টটি ভিউপোর্টে ঢোকে
+   (IntersectionObserver দিয়ে .visible ক্লাস)। স্ক্রিন থেকে সম্পূর্ণ বেরিয়ে
+   গেলে .visible সরে যায় — আবার এলে অ্যানিমেশন আবার শুরু হয়।
+
+   ট্রানজিশনের বদলে keyframe-animation ব্যবহার করা হয়েছে যাতে কার্ডের
+   নিজস্ব hover transform (translateY লিফট) ও transition কখনো ওভাররাইড
+   না হয়। fill-mode: backwards — ডিলে চলাকালীন লুকানো থাকে, শেষে
+   এলিমেন্টের নিজস্ব স্টাইলে ফিরে আসে (hover ঠিকভাবে কাজ করে)। */
+@keyframes slideInR {
+  from { opacity: 0; transform: translateX(80px); }
+}
+@keyframes slideInL {
+  from { opacity: 0; transform: translateX(-80px); }
+}
+
+/* সেকশন হেডার, প্রাইসিং/স্ট্যাটস কার্ড, ফুটার কলাম, ম্যাপ — স্বতন্ত্র এলিমেন্ট */
+.reveal { opacity: 0; }
+.reveal.visible { opacity: 1; }
+.reveal.visible.from-right {
+  animation: slideInR 0.8s var(--ease) backwards;
+  animation-delay: var(--d, 0s);
+}
+.reveal.visible.from-left {
+  animation: slideInL 0.8s var(--ease) backwards;
+  animation-delay: var(--d, 0s);
+}
+
+/* ডাইনামিক গ্রিডের কার্ড — গ্রিড ভিউপোর্টে এলে কার্ডগুলো একের পর এক ঢোকে */
+.stagger > * { opacity: 0; }
+.stagger.visible > * { opacity: 1; }
+.stagger.visible > *.from-right {
+  animation: slideInR 0.65s var(--ease) backwards;
+  animation-delay: var(--d, 0s);
+}
+.stagger.visible > *.from-left {
+  animation: slideInL 0.65s var(--ease) backwards;
+  animation-delay: var(--d, 0s);
+}
+
+/* ধাপে ধাপে (stagger) এন্ট্রি ডিলে — কার্ডগুলো একটার পর একটা ঢোকে */
+.stagger.visible > *:nth-child(1) { --d: 0.05s; }
+.stagger.visible > *:nth-child(2) { --d: 0.12s; }
+.stagger.visible > *:nth-child(3) { --d: 0.19s; }
+.stagger.visible > *:nth-child(4) { --d: 0.26s; }
+.stagger.visible > *:nth-child(5) { --d: 0.33s; }
+.stagger.visible > *:nth-child(6) { --d: 0.4s; }
+.stagger.visible > *:nth-child(7) { --d: 0.47s; }
+.stagger.visible > *:nth-child(8) { --d: 0.54s; }
+
+/* প্রাইসিং ও স্ট্যাটস কার্ডেও হালকা ক্যাসকেড ডিলে */
+.pricing-grid > .reveal:nth-child(2),
+.stats-grid > .reveal:nth-child(2) { --d: 0.12s; }
+.pricing-grid > .reveal:nth-child(3),
+.stats-grid > .reveal:nth-child(3) { --d: 0.24s; }
+.stats-grid > .reveal:nth-child(4) { --d: 0.36s; }
+
+/* Success card pop */
+.form-success { animation: successPop 0.5s var(--ease) both; }
+
+/* Hero entrance (on load, no observer needed) */
+.hero-badge, .hero-title, .hero-sub, .hero-cta, .hero-stats, .hero-visual {
+  animation: fadeInUp 0.9s var(--ease) both;
+}
+.hero-title { animation-delay: 0.12s; }
+.hero-sub { animation-delay: 0.24s; }
+.hero-cta { animation-delay: 0.36s; }
+.hero-stats { animation-delay: 0.48s; }
+.hero-visual { animation-delay: 0.3s; }
+
+/* Count-up cells */
+.count-cell strong { transition: color 0.3s; }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal, .stagger > * { opacity: 1; transform: none; }
+}
