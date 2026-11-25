@@ -185,14 +185,15 @@
     });
   }
 
-  /* ডাইনামিক গ্রিড (stagger) কন্টেইনারগুলো রেন্ডার হওয়ার পরে ওয়াচ শুরু হয় —
-     এক ফ্রেম অপেক্ষা করা হয় যাতে কার্ডগুলোর লুকানো অবস্থা আঁকা হয়ে যায়,
-     তারপর ভিউপোর্টে এলে অ্যানিমেশন নিশ্চিতভাবে চলে (শুধু তখনই)। */
+  /* ডাইনামিক গ্রিড (stagger) — কন্টেইনার নয়, প্রতিটি কার্ড আলাদাভাবে ওয়াচ হয়।
+     আগে পুরো কন্টেইনার ওয়াচ করা হতো: মোবাইলে গ্রিড উল্লম্বভাবে অনেক লম্বা
+     হওয়ায় কন্টেইনারের এক কোণা স্ক্রিনে ঢুকলেই নিচের সব কার্ড (স্ক্রিনের
+     বাইরেরগুলোও) একসাথে এনিমেট হয়ে যেত — পরে কার্ডে স্ক্রল করে এলে
+     আর এনিমেশন দেখা যেত না। এখন প্রতিটি কার্ড নিজে ভিউপোর্টে এলে তবেই
+     তার এনিমেশন চলে — মোবাইল ও ডেস্কটপ উভয়েই একই আচরণ।
+     রি-রেন্ডারের পর নতুন কার্ড [data-io] চিহ্ন ছাড়া পাওয়া গেলে আবার ওয়াচ হয়। */
   var staggerIO = null;
-  function watchStaggers() {
-    var grids = document.querySelectorAll(".stagger:not([data-watch])");
-    if (!grids.length) return;
-    grids.forEach(function (g) { g.setAttribute("data-watch", "1"); });
+  function ensureStaggerIO() {
     if (!staggerIO) {
       staggerIO = new IntersectionObserver(function (entries) {
         entries.forEach(function (en) {
@@ -201,8 +202,18 @@
         });
       }, { threshold: 0 });
     }
+    return staggerIO;
+  }
+  function watchStaggers() {
+    var cards = document.querySelectorAll(".stagger > *:not([data-io])");
+    if (!cards.length) return;
+    var io = ensureStaggerIO();
+    /* এক ফ্রেম অপেক্ষা — কার্ডগুলোর লুকানো অবস্থা আঁকা হয়ে যায়, তারপর ওয়াচ */
     requestAnimationFrame(function () {
-      grids.forEach(function (g) { staggerIO.observe(g); });
+      cards.forEach(function (c) {
+        c.setAttribute("data-io", "1");
+        io.observe(c);
+      });
     });
   }
 
@@ -323,7 +334,8 @@
         tab.classList.add("active");
         noticeCat = tab.getAttribute("data-cat");
         renderNotices();
-        applyStaggerDirs(); /* নতুন নোটিশগুলো ডান/বাম দিক পায় — কন্টেইনার visible থাকায় staggered এন্ট্রি অ্যানিমেশন নিজে থেকেই চলে */
+        applyStaggerDirs(); /* নতুন নোটিশগুলো ডান/বাম দিক পায় */
+        watchStaggers(); /* নতুন নোটিশ কার্ডগুলো ওয়াচে ঢোকে — স্ক্রিনে এলেই এনিমেট হয় */
       });
     });
   }
